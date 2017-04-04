@@ -28,9 +28,10 @@ module.exports = function(app, db) {
 
     var myRes = db
       .collection('schools')
-      .find()
+			.find({
+        score: { $gt: 79 }
+      })
       .limit(limit)
-			.sort({ title: 1 })
       .toArray((err, cursor) => {
         if(err)
           console.error(err);

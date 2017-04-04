@@ -6,7 +6,7 @@ const cors = require('cors');
 const db = require('./config/db');
 
 // port
-const port = 8010;
+const port = 8011;
 
 // cannot handle submited form with encoded
 app.use(bodyParser.urlencoded({ extended: true }));
